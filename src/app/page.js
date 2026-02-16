@@ -19,7 +19,7 @@ const page = () => {
         <OurEvents />
         <EventPrices />
         {/* <Myteam/> */}
-        {/* <Reviews /> */}
+        <Reviews />
         <Contact />
       </main>
         <Footer />

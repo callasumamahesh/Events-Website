@@ -23,7 +23,7 @@ function Contact() {
     }
 
   return (
-    <div className='max-w-135 m-auto mb-8'>
+    <div className='max-w-135 m-auto mb-8 scroll-mt-40' id='contact-us'>
         <h2 className='text-4xl uppercase text-orange-500 text-center mt-8'>Contact Us</h2>
         <Card className='mt-8'>
             <form action="" className='p-8 flex gap-8 flex-col'>

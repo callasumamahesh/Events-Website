@@ -23,7 +23,7 @@ const EventPrices = () => {
     ]
 
   return (
-    <div className='max-w-300 m-auto' id='eventPrices'>
+    <div className='max-w-300 m-auto scroll-mt-50' id='eventPrices'>
             <h2 className='text-4xl uppercase text-orange-500 text-center mt-8'>Event Prices</h2>
             <section className='mt-8 m-4 grid grid-cols-3 gap-3'>
                 {

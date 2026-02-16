@@ -24,11 +24,11 @@ const Header = () => {
         // },
         {
             label : "Reviews",
-            value : "/about"
+            value : "#reviews"
         },
         {
             label : "Contact Us",
-            value : "/about"
+            value : "#contact-us"
         }
     ]
 
