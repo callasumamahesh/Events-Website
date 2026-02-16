@@ -7,7 +7,7 @@ import Image from 'next/image'
 import { Button } from '../ui/button'
 function HeroSection() {
     return (
-        <section className='m-4 mt-8'>
+        <section className='m-4 scroll-mt-100' id='about' >
             <Card className='p-4 pt-16 pb-16 flex flex-row items-center justify-center gap-10'>
                 <div className='flex gap-6 flex-col ml-10'>
                     <h2 className='text-5xl uppercase text-orange-500'>Shanmukha</h2>

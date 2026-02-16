@@ -8,18 +8,22 @@ const Header = () => {
     const headerLinks = [
         {
             label : "About",
-            value : "/about"
+            value : "#about"
         },
         {
             label : "Our Events",
-            value : "/about"
+            value : "#ourEvents"
         },
         {
             label : "Event Prices",
-            value : "/about"
+            value : "#eventPrices"
         },
+        // {
+        //     label : "Our Team",
+        //     value : "#eventTeam"
+        // },
         {
-            label : "Our Team",
+            label : "Reviews",
             value : "/about"
         },
         {
@@ -29,7 +33,7 @@ const Header = () => {
     ]
 
   return (
-    <header className='h-18 flex items-center justify-between mt-8 mb-4 pl-4 pr-4 sticky top-0 bg-white z-50'>
+    <header className='min-h-18 flex items-center justify-between pl-4 pr-4 sticky top-0 bg-white z-50 pt-6 pb-6'>
         <section className="logo-section flex gap-10 h-full basis-100 items-center">
             <Image className='h-12.5' src={Logo} alt="Event Logo" width={50} height={50}/>
             <h1 className='text-4xl text-black uppercase'>Attuluri Events</h1>
