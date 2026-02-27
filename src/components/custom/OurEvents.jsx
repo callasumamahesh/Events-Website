@@ -48,7 +48,7 @@ const OurEvents = () => {
             
             <section className='relative'>
                 <Carousel 
-                    className="w-full"
+                    className="w-full touch-pan-y"
                     opts={{
                         align: "start",
                         dragFree: true,

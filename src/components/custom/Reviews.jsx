@@ -58,7 +58,7 @@ function Reviews() {
   ];
 
   const plugin = React.useRef(
-    Autoplay({ delay: 2000, stopOnInteraction: true })
+    Autoplay({ delay: 3500, stopOnInteraction: true, stopOnMouseEnter: false })
   )
 
   return (
@@ -72,8 +72,10 @@ function Reviews() {
         <Carousel
           plugins={[plugin.current]}
           className="w-full"
-          onMouseEnter={plugin.current.stop}
-          onMouseLeave={plugin.current.reset}
+          opts={{
+              align: "start",
+              loop: true
+          }}
         >
           <CarouselContent>
             {reviews.map((review, index) => (
@@ -110,6 +112,13 @@ function Reviews() {
               </CarouselItem>
             ))}
           </CarouselContent>
+          {/* Mobile Navigation */}
+          <div className="flex justify-center gap-4 mt-8 md:hidden">
+            <CarouselPrevious className='static translate-x-0 translate-y-0 text-zinc-400 hover:bg-amber-600 hover:text-white border-zinc-200 transition-all bg-transparent'/>
+            <CarouselNext className='static translate-x-0 translate-y-0 text-zinc-400 hover:bg-amber-600 hover:text-white border-zinc-200 transition-all bg-transparent'/>
+          </div>
+          
+          {/* Desktop Navigation */}
           <div className="hidden md:block">
             <CarouselPrevious className='-left-12 border-zinc-200 text-zinc-400 hover:bg-amber-600 hover:text-white hover:border-amber-600 transition-all bg-transparent' />
             <CarouselNext className='-right-12 border-zinc-200 text-zinc-400 hover:bg-amber-600 hover:text-white hover:border-amber-600 transition-all bg-transparent' />
