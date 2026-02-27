@@ -1,20 +1,17 @@
-import { Button } from '@/components/ui/button'
 import React from 'react'
-import Page from './dashboard/page'
 import Header from '@/components/custom/Header'
 import HeroSection from '@/components/custom/HeroSection'
 import OurEvents from '@/components/custom/OurEvents'
 import EventPrices from '@/components/custom/EventPrices'
-import Myteam from '@/components/custom/Myteam'
 import Reviews from '@/components/custom/Reviews'
 import Contact from '@/components/custom/Contact'
 import Footer from '@/components/custom/Footer'
 
 const page = () => {
   return (
-    <div>
-      <main className='max-w-350 m-auto'>
-        <Header />
+    <div className="bg-zinc-50 min-h-screen selection:bg-amber-200 selection:text-amber-900">
+      <Header />
+      <main>
         <HeroSection />
         <OurEvents />
         <EventPrices />
@@ -22,7 +19,7 @@ const page = () => {
         <Reviews />
         <Contact />
       </main>
-        <Footer />
+      <Footer />
     </div>
   )
 }
