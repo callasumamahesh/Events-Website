@@ -8,32 +8,32 @@ const OurEvents = () => {
             eventName : "Event 1",
             eventDate : '09-02-2026',
             eventPlace : "Hyderabad",
-            eventImage : "/Event1.jpg",
+            eventImage : "/event1.jpeg",
             eventDescription: 'This is a great event'
         },
         {
             eventName : "Event 1",
             eventDate : '09-02-2026',
             eventPlace : "Hyderabad",
-            eventImage : "/Event2.jpg",
+            eventImage : "/event2.jpeg",
             eventDescription: 'This is a great event'
         },{
             eventName : "Event 1",
             eventDate : '09-02-2026',
             eventPlace : "Hyderabad",
-            eventImage : "/Event3.jpg",
+            eventImage : "/event3.jpeg",
             eventDescription: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, quisquam? Ratione enim explicabo sequi suscipit magni assumenda in quam ab deleniti officia nulla, at, quod reiciendis beatae praesentium ut? Praesentium.'
         },{
             eventName : "Event 1",
             eventDate : '09-02-2026',
             eventPlace : "Hyderabad",
-            eventImage : "/Event4.jpg",
+            eventImage : "/event4.jpeg",
             eventDescription: 'This is a great event'
         },{
             eventName : "Event 1",
             eventDate : '09-02-2026',
             eventPlace : "Hyderabad",
-            eventImage : "/Event1.jpg",
+            eventImage : "/event5.jpeg",
             eventDescription: 'This is a great event'
         }
     ]
