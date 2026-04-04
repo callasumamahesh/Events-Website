@@ -6,7 +6,7 @@ import React, { useState } from 'react'
 function Login() {
   const [type, setType] = useState('password');
   const [info, setInfo] = useState({
-    user:'',
+    userEmail:'',
     password:''
   })
 
@@ -18,9 +18,22 @@ function Login() {
     }))
   }
 
-  const handleSubmit = () => {
-    console.log(info, 'This is form data')
+const handleSubmit = async () => {
+  try {
+    const data = await fetch("/api/who-i-am", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(info),
+    });
+
+    const res = await data.json();
+    console.log(res, "This is the response.");
+  } catch (error) {
+    console.log(error);
   }
+};
 
   return (
     <div>
@@ -29,7 +42,7 @@ function Login() {
                 <CardTitle className='text-4xl text-center uppercase'>Admin Login</CardTitle>
             </CardHeader>
             
-            <Input type='text' placeholder="Name" name="user" value={info.user} onChange={(e) => handleChange(e)}/>
+            <Input type='text' placeholder="Email" name="userEmail" value={info.userEmail} onChange={(e) => handleChange(e)}/>
             <div className='flex items-center gap-2 border rounded-md pr-4 outline-0'>
               <Input type={`${type}`} placeholder="Password" className='border-0' name="password" value={info.password} onChange={(e) => handleChange(e)}/>
               {
@@ -38,7 +51,7 @@ function Login() {
               :<svg xmlns="http://www.w3.org/2000/svg" onClick={() => setType('password')} width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-eye-off-icon lucide-eye-off cursor-pointer"><path d="M10.733 5.076a10.744 10.744 0 0 1 11.205 6.575 1 1 0 0 1 0 .696 10.747 10.747 0 0 1-1.444 2.49"/><path d="M14.084 14.158a3 3 0 0 1-4.242-4.242"/><path d="M17.479 17.499a10.75 10.75 0 0 1-15.417-5.151 1 1 0 0 1 0-.696 10.75 10.75 0 0 1 4.446-5.143"/><path d="m2 2 20 20"/></svg>
               }
             </div>
-            <Button onClick={handleSubmit} disabled={(info.user && info.password) ? false : true }>Login</Button>
+            <Button onClick={handleSubmit} disabled={(info.userEmail && info.password) ? false : true }>Login</Button>
         </Card>
     </div>
   )
